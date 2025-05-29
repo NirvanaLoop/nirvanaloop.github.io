@@ -6,8 +6,11 @@
     <title>个人简历 - 主页</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <div class="particles-container" id="particles-js"></div>
+    
     <nav class="navbar">
         <div class="nav-brand">TechResume</div>
         <div class="nav-links">
@@ -34,36 +37,75 @@
                 </div>
                 <h1 class="name">Nirvana</h1>
                 <p class="title">全栈开发工程师</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                </div>
             </div>
         </section>
 
         <section class="about">
             <h2>关于我</h2>
             <p>热爱技术，专注于Web开发和人工智能领域。具有丰富的项目经验和团队协作能力。</p>
+            <div class="tech-stack">
+                <div class="tech-item">
+                    <i class="fab fa-html5"></i>
+                    <span>HTML5</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-css3-alt"></i>
+                    <span>CSS3</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-js"></i>
+                    <span>JavaScript</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-react"></i>
+                    <span>React</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-python"></i>
+                    <span>Python</span>
+                </div>
+            </div>
         </section>
 
         <section class="skills">
             <h2>技能专长</h2>
             <div class="skill-grid">
-                <div class="skill-item">
+                <div class="skill-item" data-aos="fade-up">
                     <div class="skill-icon">💻</div>
                     <h3>前端开发</h3>
                     <p>HTML5, CSS3, JavaScript, React</p>
+                    <div class="skill-progress">
+                        <div class="progress-bar" style="width: 90%"></div>
+                    </div>
                 </div>
-                <div class="skill-item">
+                <div class="skill-item" data-aos="fade-up" data-aos-delay="100">
                     <div class="skill-icon">⚙️</div>
                     <h3>后端开发</h3>
                     <p>Python, Node.js, Java</p>
+                    <div class="skill-progress">
+                        <div class="progress-bar" style="width: 85%"></div>
+                    </div>
                 </div>
-                <div class="skill-item">
+                <div class="skill-item" data-aos="fade-up" data-aos-delay="200">
                     <div class="skill-icon">🤖</div>
                     <h3>人工智能</h3>
                     <p>机器学习, 深度学习, NLP</p>
+                    <div class="skill-progress">
+                        <div class="progress-bar" style="width: 80%"></div>
+                    </div>
                 </div>
-                <div class="skill-item">
+                <div class="skill-item" data-aos="fade-up" data-aos-delay="300">
                     <div class="skill-icon">🔧</div>
                     <h3>开发工具</h3>
                     <p>Git, Docker, AWS</p>
+                    <div class="skill-progress">
+                        <div class="progress-bar" style="width: 75%"></div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -73,6 +115,8 @@
         <p>© 2024 TechResume. All rights reserved.</p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="main.js"></script>
 </body>
 </html> 
