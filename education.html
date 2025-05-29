@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>教育背景 - 个人简历</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .education-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .education-card {
+            background: var(--card-background);
+            border-radius: 10px;
+            border: 1px solid var(--primary-color);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .education-card::before {
+            content: '';
+            position: absolute;
+            left: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            background: var(--primary-color);
+            border-radius: 50%;
+        }
+
+        .education-year {
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .education-degree {
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .education-school {
+            color: var(--text-color);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .education-description {
+            color: var(--text-color);
+            opacity: 0.9;
+            margin-bottom: 1rem;
+        }
+
+        .education-achievements {
+            list-style: none;
+            padding: 0;
+        }
+
+        .education-achievements li {
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .education-achievements li::before {
+            content: '•';
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+        }
+
+        @media (max-width: 768px) {
+            .education-container {
+                padding: 1rem;
+            }
+
+            .education-card {
+                padding: 1.5rem;
+            }
+
+            .education-card::before {
+                left: -15px;
+                width: 15px;
+                height: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">TechResume</div>
+        <div class="nav-links">
+            <a href="index.html">首页</a>
+            <a href="experience.html">工作经历</a>
+            <a href="projects.html">项目作品</a>
+            <a href="education.html" class="active">教育背景</a>
+            <a href="contact.html">联系方式</a>
+        </div>
+        <div class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h1 class="name" style="text-align: center; margin-bottom: 3rem;">教育背景</h1>
+        
+        <div class="education-container">
+            <div class="education-card">
+                <div class="education-year">2016 - 2018</div>
+                <h3 class="education-degree">计算机科学硕士</h3>
+                <div class="education-school">某知名大学</div>
+                <p class="education-description">
+                    专注于人工智能和机器学习领域的研究，参与多个科研项目。
+                </p>
+                <ul class="education-achievements">
+                    <li>获得优秀毕业生称号</li>
+                    <li>发表SCI论文2篇</li>
+                    <li>获得国家奖学金</li>
+                </ul>
+            </div>
+
+            <div class="education-card">
+                <div class="education-year">2012 - 2016</div>
+                <h3 class="education-degree">计算机科学与技术学士</h3>
+                <div class="education-school">某知名大学</div>
+                <p class="education-description">
+                    主修计算机科学与技术，辅修数学。
+                </p>
+                <ul class="education-achievements">
+                    <li>获得优秀学生干部称号</li>
+                    <li>参与多个软件开发项目</li>
+                    <li>获得校级奖学金</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 TechResume. All rights reserved.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html> 

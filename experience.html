@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>工作经历 - 个人简历</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 2rem;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background: var(--primary-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1px;
+        }
+
+        .timeline-item {
+            padding: 2rem;
+            position: relative;
+            width: 50%;
+            margin-bottom: 2rem;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+
+        .timeline-content {
+            background: var(--card-background);
+            padding: 2rem;
+            border-radius: 10px;
+            border: 1px solid var(--primary-color);
+        }
+
+        .timeline-date {
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-title {
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-company {
+            color: var(--text-color);
+            margin-bottom: 1rem;
+        }
+
+        .timeline-description {
+            color: var(--text-color);
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            .timeline::after {
+                left: 31px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">TechResume</div>
+        <div class="nav-links">
+            <a href="index.html">首页</a>
+            <a href="experience.html" class="active">工作经历</a>
+            <a href="projects.html">项目作品</a>
+            <a href="education.html">教育背景</a>
+            <a href="contact.html">联系方式</a>
+        </div>
+        <div class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h1 class="name" style="text-align: center; margin-bottom: 3rem;">工作经历</h1>
+        
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">2022 - 至今</div>
+                    <h3 class="timeline-title">高级全栈开发工程师</h3>
+                    <div class="timeline-company">科技公司 A</div>
+                    <p class="timeline-description">
+                        负责公司核心产品的架构设计和开发，带领团队完成多个重要项目。
+                        优化系统性能，提升用户体验，实现业务目标。
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">2020 - 2022</div>
+                    <h3 class="timeline-title">全栈开发工程师</h3>
+                    <div class="timeline-company">科技公司 B</div>
+                    <p class="timeline-description">
+                        参与开发企业级Web应用，负责前后端功能实现。
+                        设计并实现RESTful API，优化数据库性能。
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">2018 - 2020</div>
+                    <h3 class="timeline-title">前端开发工程师</h3>
+                    <div class="timeline-company">科技公司 C</div>
+                    <p class="timeline-description">
+                        负责公司产品的前端开发工作，使用React框架构建用户界面。
+                        实现响应式设计，确保跨平台兼容性。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 TechResume. All rights reserved.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html> 
