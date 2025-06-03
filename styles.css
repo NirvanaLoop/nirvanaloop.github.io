@@ -246,33 +246,100 @@ footer {
 
 /* 技术栈 */
 .tech-stack {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1.5rem;
     margin-top: 2rem;
+    perspective: 1000px;
 }
 
 .tech-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    transition: all 0.3s ease;
+    background: var(--card-background);
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid var(--primary-color);
+    transition: all 0.5s ease;
+    transform-style: preserve-3d;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 255, 157, 0.1);
+}
+
+.tech-item:hover {
+    transform: translateY(-10px) rotateX(10deg) rotateY(10deg);
+    box-shadow: 0 15px 30px rgba(0, 255, 157, 0.2);
 }
 
 .tech-item i {
     font-size: 2.5rem;
+    margin-bottom: 1rem;
     color: var(--primary-color);
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.tech-item:hover i {
+    transform: scale(1.2) rotate(360deg);
+    text-shadow: 0 0 20px var(--primary-color);
 }
 
 .tech-item span {
-    font-size: 0.9rem;
+    display: block;
+    font-size: 1rem;
     color: var(--text-color);
+    transition: all 0.3s ease;
 }
 
-.tech-item:hover {
-    transform: translateY(-5px);
+.tech-item:hover span {
+    transform: translateZ(20px);
+    color: var(--primary-color);
+}
+
+.tech-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent, rgba(0, 255, 157, 0.1));
+    border-radius: 15px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.tech-item:hover::before {
+    opacity: 1;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.tech-item:nth-child(odd) {
+    animation: float 3s ease-in-out infinite;
+}
+
+.tech-item:nth-child(even) {
+    animation: float 3s ease-in-out infinite 1.5s;
+}
+
+@media (max-width: 768px) {
+    .tech-stack {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .tech-item {
+        padding: 1rem;
+    }
+    
+    .tech-item i {
+        font-size: 2rem;
+    }
 }
 
 /* 技能进度条 */
